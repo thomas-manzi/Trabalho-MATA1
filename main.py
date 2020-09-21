@@ -83,8 +83,11 @@ def main():
     mdc = mdcEuclides(e,lambN)
     print(mdc)
     
+    lambN=40
+
     primeiroQuadrado = (lambN - math.floor(lambN/e) * e) % lambN
     print(primeiroQuadrado)
+    
 
 
 main()
