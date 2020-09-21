@@ -68,15 +68,17 @@ def main():
         print("Numero precisa ser primo")
         q = int(input("Digite Q:"))
 
-    a=mdcEuclides(p,q)
-
-    #mmc()
+    lambN=lambdN(p,q)
+    print(lambN)
+    
 
     e = int(input("Digite E:"))
-    while(validaChavePublica(e) == False):
-        print("Digite outro E")
-        e = int(input("Digite E:"))
-
+    mdc=mdcEuclides(e,lambN)
+    if(e>lambN or e<1):
+        while(mdc!=1):
+            e = int(input("Digite E:"))
+    
+    print(mdc)
     
 
 
