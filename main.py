@@ -22,22 +22,20 @@ def primo(n):
 
 def mdcEuclides(a , b):
     t=True
-    r=0  # resultado do mod
+    aux = 0 
+      # r = resultado do mod
     while(t):
         r = a % b
         a = b
-        r = b 
+        aux = b
+        b = r 
         if (r == 0 ):
             t = False
-    return(b)
-
-        
+    return(aux)
 
 
 
 
-
-print(primo(29996224275833))
 
 
 
