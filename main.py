@@ -22,7 +22,7 @@ def primo(n):
 
 def mdcEuclides(a , b):
     t=True
-    aux = 0 
+    aux = 0    
       # r = resultado do mod
     while(t):
         r = a % b
@@ -55,31 +55,36 @@ def validaChavePublica(e):
 
 #print(mmc(5,11))
 
-#math.floor
+
 def main():
-    p = int(input("Digite P:"))
+    p = int(input("Digite P:\n"))
     while(primo(p) == False):
         print("Numero precisa ser primo")
-        p = int(input("Digite P:"))
+        p = int(input("Digite P:\n"))
         
 
-    q = int(input("Digite Q:"))
+    q = int(input("Digite Q:\n"))
     while(primo(q) == False):
         print("Numero precisa ser primo")
-        q = int(input("Digite Q:"))
+        q = int(input("Digite Q:\n"))
 
-    lambN=lambdN(p,q)
-    print(lambN)
-    
+    lambN=lambdN(p,q) # valor do P e Q na expressao lambda de N
+    #print("valor do nosso lambda de N : ",lambN)
 
-    e = int(input("Digite E:"))
-    mdc=mdcEuclides(e,lambN)
-    if(e>lambN or e<1):
-        while(mdc!=1):
-            e = int(input("Digite E:"))
-    
+
+    e = int(input("Digite E:\n"))
+    while(e>=lambN or e<1):
+        e = int(input("Digite E:\n"))
+    mdc = mdcEuclides(e,lambN)
+    while(mdc!=1):
+        e = int(input("O E escolhido nao eh CO-PRIMO da funcao lambda(N) Digite E:\n"))
+        mdc = mdcEuclides(e,lambN)
+
+    mdc = mdcEuclides(e,lambN)
     print(mdc)
     
+    primeiroQuadrado = (lambN - math.floor(lambN/e) * e) % lambN
+    print(primeiroQuadrado)
 
 
 main()
