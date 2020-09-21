@@ -34,7 +34,49 @@ def mdcEuclides(a , b):
     return(aux)
 
 
+def mmc(a,b): 
+    resultado = (a * b) /(mdcEuclides(a,b))
+    return resultado
 
+#lambda de n
+def lambdN(p , q):
+    resultado = mmc(p-1, q-1)
+    return resultado
+
+
+def validaChavePublica(e):
+    if (e>1 and e<lambdN):
+        if(mdcEuclides(e,lambdN) ==1):
+            return True
+        else:
+            return False
+
+
+
+#print(mmc(5,11))
+
+#math.floor
+def main():
+    p = int(input("Digite P:"))
+    while(primo(p) == False):
+        print("Numero precisa ser primo")
+        p = int(input("Digite P:"))
+        
+
+    q = int(input("Digite Q:"))
+    while(primo(q) == False):
+        print("Numero precisa ser primo")
+        q = int(input("Digite Q:"))
+
+
+    e = int(input("Digite E:"))
+    while(validaChavePublica(e) == False):
+        p = int(input("Digite P:"))
+
+    
+
+
+main()
 
 
 
