@@ -79,14 +79,26 @@ def main():
     while(mdc!=1):
         e = int(input("O E escolhido nao eh CO-PRIMO da funcao lambda(N) Digite E:\n"))
         mdc = mdcEuclides(e,lambN)
-
-    mdc = mdcEuclides(e,lambN)
-    print(mdc)
     
-    lambN=40
-
-    primeiroQuadrado = (lambN - math.floor(lambN/e) * e) % lambN
-    print(primeiroQuadrado)
+    print (lambN)   
+    
+    primeiroQuadrado = 0
+    a = lambN
+    b = lambN
+    c = e
+    d = 1
+    while (primeiroQuadrado != 1):
+        print ("a",a,"b",b,"c",c,"d",d)
+        primeiroQuadrado = (a - math.floor(a/c) * c) % lambN
+        segundoQuadrado = (b - math.floor(a/c) * d) % lambN
+        a = c
+        b = d
+        c = primeiroQuadrado
+        d = segundoQuadrado
+        print ("a",a,"b",b,"c",c,"d",d)
+        print (segundoQuadrado)
+    
+     
     
 
 
