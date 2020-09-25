@@ -106,12 +106,11 @@ def main():
     
 
     chave_d = chavePrivada_D(lamN, e )
+    print(chave_d)
     return chave_d
 
-    
-    
 
-
+    
 main()
 
 
