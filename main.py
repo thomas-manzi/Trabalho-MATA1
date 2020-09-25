@@ -67,8 +67,8 @@ def chavePrivada_D(lamN,e):
         b = d
         c = primeiroQuadrado
         d = segundoQuadrado
-        print ("a",a,"b",b,"c",c,"d",d)
-        print (segundoQuadrado)
+        #print ("a",a,"b",b,"c",c,"d",d)
+        #print (segundoQuadrado)
     return segundoQuadrado
     
 
@@ -106,11 +106,9 @@ def main():
     
 
     chave_d = chavePrivada_D(lamN, e )
-    print(chave_d)
+    return chave_d
 
-    #primeiroQuadrado = (lamN - math.floor(lamN/e) * e) % lamN
-    #e=primeiroQuadrado
-    #print(primeiroQuadrado)
+    
     
 
 
