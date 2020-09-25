@@ -98,6 +98,29 @@ def main():
     mdc = mdcEuclides(e,lamN)
     while(mdc!=1):
         e = int(input("O E escolhido nao eh CO-PRIMO da funcao lambda(N) Digite E:\n"))
+<<<<<<< HEAD
+        mdc = mdcEuclides(e,lambN)
+    
+    print (lambN)   
+    
+    primeiroQuadrado = 0
+    a = lambN
+    b = lambN
+    c = e
+    d = 1
+    while (primeiroQuadrado != 1):
+        print ("a",a,"b",b,"c",c,"d",d)
+        primeiroQuadrado = (a - math.floor(a/c) * c) % lambN
+        segundoQuadrado = (b - math.floor(a/c) * d) % lambN
+        a = c
+        b = d
+        c = primeiroQuadrado
+        d = segundoQuadrado
+        print ("a",a,"b",b,"c",c,"d",d)
+        print (segundoQuadrado)
+    
+     
+=======
         mdc = mdcEuclides(e,lamN)
 
     #mdc = mdcEuclides(e,lamN)
@@ -106,11 +129,13 @@ def main():
     
 
     chave_d = chavePrivada_D(lamN, e )
-    print(chave_d)
     return chave_d
 
-
     
+>>>>>>> 3341d873a912aaa919811ce2735eb0203b59ad8f
+    
+
+
 main()
 
 
