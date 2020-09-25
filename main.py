@@ -53,6 +53,26 @@ def validaChavePublica(e):
 
 
 
+    
+def chavePrivada_D(lamN,e):
+    primeiroQuadrado = 0
+    a = lamN
+    b = lamN
+    c = e
+    d = 1
+    while (primeiroQuadrado != 1):
+        primeiroQuadrado = (a - math.floor(a/c) * c) % lamN
+        segundoQuadrado = (b - math.floor(a/c) * d) % lamN
+        a = c
+        b = d
+        c = primeiroQuadrado
+        d = segundoQuadrado
+        #print ("a",a,"b",b,"c",c,"d",d)
+        #print (segundoQuadrado)
+    return segundoQuadrado
+    
+
+
 #print(mmc(5,11))
 
 
@@ -68,16 +88,17 @@ def main():
         print("Numero precisa ser primo")
         q = int(input("Digite Q:\n"))
 
-    lambN=lambdN(p,q) # valor do P e Q na expressao lambda de N
-    #print("valor do nosso lambda de N : ",lambN)
+    lamN=lambdN(p,q) # valor do P e Q na expressao lambda de N
+    #print("valor do nosso lambda de N : ",lamN)
 
-
+    # validando chave publica E 
     e = int(input("Digite E:\n"))
-    while(e>=lambN or e<1):
+    while(e>=lamN or e<1):
         e = int(input("Digite E:\n"))
-    mdc = mdcEuclides(e,lambN)
+    mdc = mdcEuclides(e,lamN)
     while(mdc!=1):
         e = int(input("O E escolhido nao eh CO-PRIMO da funcao lambda(N) Digite E:\n"))
+<<<<<<< HEAD
         mdc = mdcEuclides(e,lambN)
     
     print (lambN)   
@@ -99,6 +120,19 @@ def main():
         print (segundoQuadrado)
     
      
+=======
+        mdc = mdcEuclides(e,lamN)
+
+    #mdc = mdcEuclides(e,lamN)
+    #print(mdc)
+    
+    
+
+    chave_d = chavePrivada_D(lamN, e )
+    return chave_d
+
+    
+>>>>>>> 3341d873a912aaa919811ce2735eb0203b59ad8f
     
 
 
