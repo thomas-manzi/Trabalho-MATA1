@@ -1,13 +1,18 @@
 def matriz():
-    a= 5
+    a= 3
     arr = []
     for i in range(1,a+1):
         linha = []
         for j in range(1,a+1):
-            a = int(input("numero aresta"))
-            linha.append(a)
+            b = int(input("numero aresta"))
+            linha.append(b)
         arr.append(linha)
-    print(arr)
+    
+    for i in range(len(arr)):
+        print(arr[i], end="\n")
+        
+        
+
 
 matriz()
 
