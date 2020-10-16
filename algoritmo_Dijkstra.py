@@ -41,7 +41,20 @@ def main():
 
     #for i in range(len(grafo)):
         #print(i)
-        #for j in range(len(grafo)):
+    #    for j in range(len(grafo)):
+    #        if(i != j ):
+    #            if (grafo[i+j] >0):
+                    #somaCaminho = grafo[i,j]
+                    #print(somaCaminho)
+    #        else:
+    #            break
+
+    for i in range(len(grafo)):
+        for j in range(len(grafo)):
+            
+            print(grafo[i])
+
+    #criar varias listas , armazenar valor de cada caminho em uma lista , fazer a soma do caminho e jogar o numero para outra lista, zerar a primeira ,  
 
 
 main()    
