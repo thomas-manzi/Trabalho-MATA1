@@ -13,7 +13,6 @@ int main ()
             printf ("Qual eh o peso da aresta de %i para %i ", (i+1) , (j+1));
             scanf ("%i", &matriz [i][j]);
         }
-        
     }
 
     for (int i = 0; i < linhasColunas; i++)
@@ -23,8 +22,9 @@ int main ()
             printf ("%i ", matriz [i][j]);            
         }
         printf ("\n");
-        
     }
+    
+
 
 
 
