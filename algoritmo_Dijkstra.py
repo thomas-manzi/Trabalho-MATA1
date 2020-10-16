@@ -4,8 +4,8 @@ def matriz():
     for i in range(1,a+1):
         linha = []
         for j in range(1,a+1):
-            print("Aresta numero",i, "e", j,"\n")
-            b = int(input("Peso da Aresta(caso nao tenha coloque 0)"))
+            print("Linha",i, "e coluna", j,"\n")
+            b = int(input("Peso da Aresta(caso nao tenha coloque 0)\n"))
             linha.append(b)
         arr.append(linha)
     
