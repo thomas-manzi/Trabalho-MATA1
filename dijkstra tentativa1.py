@@ -61,7 +61,7 @@ class Grafo:
                 # todos os vértices começam sem vértice anterior
                 nao_visitados.append(v)
                 # adicionar todos os vértices à lista de não visitados
-
+            
             while len(nao_visitados) > 0: # enquanto tiver vértice na lista de vértices
                 for vizinho in self.vertices[atual].vizinhos: # para cada vizinho do vértice atual
                     if self.vertices[vizinho[0]].visitado == False: # se o vizinho não tiver sido visitado
