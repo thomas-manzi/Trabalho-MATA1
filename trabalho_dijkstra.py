@@ -1,12 +1,11 @@
 grafo = {
-    'a':{'b':3,'c':4,'d':7},
-    'b':{'c':1,'f':5},
-    'c':{'f':6, 'd':2},
-    'd':{'e':3 , 'g':6},
-    'e':{'g':3, 'h':4},
-    'f':{'e':1, 'h':8},
-    'g':{'h':2},
-    'h':{'g':2}
+    'a':{'b':1,'c':3,'d':2},
+    'b':{'a':1,'d':3,'e':2.5},
+    'c':{'d':4, 'f':2},
+    'd':{'e':1 , 'f':3},
+    'e':{'f':1, 'g':1},
+    'f':{'e':1, 'g':4},
+    'g':{'e':1, 'f':4}
 }
 
 def dijkstra(grafo,inicio,final):
@@ -55,13 +54,12 @@ def dijkstra(grafo,inicio,final):
 
     caminho.insert(0, inicio)
 
-    if caminho_minimo[final] != infinito and caminho_minimo[final]<0:
+    if caminho_minimo[final] != infinito :
         print("O caminho minimo é "+ str(caminho_minimo[final]))
         print("Caminho do Grafo é "+ str(caminho))
-    else:
-        print("caminho não existe pois é infinito(os numeros são negativos) ")
+    
 
-dijkstra(grafo,'a' ,'h')
+dijkstra(grafo,'b' ,'a')
 
 
 
