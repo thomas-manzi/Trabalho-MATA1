@@ -8,6 +8,15 @@ grafo = {
     'g':{'e':1, 'f':4}
 }
 
+gr = {
+    '1':{'2':1,'3':3},
+    '2':{'1':1,'4':3},
+    '3':{'4':4},
+    '4':{'2':1}
+}
+
+
+
 def dijkstra(grafo,inicio,final):
     caminho_minimo = {} # guardar os pesos dos vertices e ser atualizado ao longo do grafo
     caminho_vertice = {} # guardar o caminho que levou ate o vertice
@@ -59,7 +68,7 @@ def dijkstra(grafo,inicio,final):
         print("Caminho do Grafo é "+ str(caminho))
     
 
-dijkstra(grafo,'a' ,'g')
+dijkstra(gr,'1' ,'4')
 
 
 
