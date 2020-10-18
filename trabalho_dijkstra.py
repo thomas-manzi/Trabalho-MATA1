@@ -15,7 +15,7 @@ def dijkstra(grafo,inicio,final):
     infinito = 99999 # numero para garantir que o caminho minimo seja validado
     caminho = [] #mostra o caminho que foi feito
 
-    for vertice in caminho_grafo:
+    for vertice in caminho_grafo:   #vai iniciar todos vertices do grafo com 99999 menos o inicial para fazer a validacao
         caminho_minimo[vertice] = infinito
     caminho_minimo[inicio] = 0
 
@@ -25,25 +25,25 @@ def dijkstra(grafo,inicio,final):
 
         for vertice in caminho_grafo:
 
-            if distancia_min_vertice is None: #garantir que a primeira distancia seja do primeiro vertice 'a'
+            if distancia_min_vertice is None: #garantir que a primeira distancia seja do primeiro vertice 'a' e na segunda seja o 'b' etc
                 distancia_min_vertice = vertice
 
-            elif caminho_minimo[vertice] < caminho_minimo[distancia_min_vertice]:
+            elif caminho_minimo[vertice] < caminho_minimo[distancia_min_vertice]: #sempre validar o caminho minimo fazendo com que se algum momento algum vertice tiver menos peso que outro realizar a troca 
                 distancia_min_vertice = vertice
         
-        opcoes_caminho = grafo[distancia_min_vertice].items() #salvar todos os caminhos dos vertices que sairam do for
+        opcoes_caminho = grafo[distancia_min_vertice].items() #salvar todos os itens da distancia minima do vertice que sair do for ou seja da menor distancia
 
-        for novo_vertice, peso in opcoes_caminho:
+        for novo_vertice, peso in opcoes_caminho:       #dentre as opcoes que chegaram do opcoes_caminho o for vai escolher qual vertice tem o menor peso e fazer a troca
 
             if peso + caminho_minimo[distancia_min_vertice] < caminho_minimo[novo_vertice]:
                 caminho_minimo[novo_vertice] = peso + caminho_minimo[distancia_min_vertice]
                 caminho_vertice[novo_vertice] = distancia_min_vertice
         
-        caminho_grafo.pop(distancia_min_vertice)
+        caminho_grafo.pop(distancia_min_vertice) # .pop tira o valor ou seja tira o 'a' na primeira volta e começa a validar denovo com o 'b' dps tira o 'b' e assim por diante e sempre ira tirar a distancia minima do vertice que foi validado
 
     valor_atual = final
     
-    while valor_atual != inicio:
+    while valor_atual != inicio: #validar se existe um caminho entre o inicio e o fim e colocar o caminho feito
         try:
             caminho.insert(0, valor_atual)
             valor_atual = caminho_vertice[valor_atual]
@@ -59,7 +59,7 @@ def dijkstra(grafo,inicio,final):
         print("Caminho do Grafo é "+ str(caminho))
     
 
-dijkstra(grafo,'b' ,'a')
+dijkstra(grafo,'a' ,'g')
 
 
 
