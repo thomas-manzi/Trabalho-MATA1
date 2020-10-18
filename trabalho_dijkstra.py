@@ -26,13 +26,13 @@ def dijkstra(grafo,inicio,final):
 
         for vertice in caminho_grafo:
 
-            if distancia_min_vertice is None:
+            if distancia_min_vertice is None: #garantir que a primeira distancia seja do primeiro vertice 'a'
                 distancia_min_vertice = vertice
 
             elif caminho_minimo[vertice] < caminho_minimo[distancia_min_vertice]:
                 distancia_min_vertice = vertice
         
-        opcoes_caminho = grafo[distancia_min_vertice].items()
+        opcoes_caminho = grafo[distancia_min_vertice].items() #salvar todos os caminhos dos vertices que sairam do for
 
         for novo_vertice, peso in opcoes_caminho:
 
