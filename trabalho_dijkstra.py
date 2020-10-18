@@ -14,7 +14,7 @@ def dijkstra(grafo,inicio,final):
     caminho_vertice = {} # guardar o caminho que levou ate o vertice
     caminho_grafo = grafo # passar o grafo inteiro 
     infinito = 99999 # numero para garantir que o caminho minimo seja validado
-    caminho = [] #
+    caminho = [] #mostra o caminho que foi feito
 
     for vertice in caminho_grafo:
         caminho_minimo[vertice] = infinito
@@ -55,9 +55,11 @@ def dijkstra(grafo,inicio,final):
 
     caminho.insert(0, inicio)
 
-    if caminho_minimo[final] != infinito:
+    if caminho_minimo[final] != infinito and caminho_minimo[final]<0:
         print("O caminho minimo é "+ str(caminho_minimo[final]))
         print("Caminho do Grafo é "+ str(caminho))
+    else:
+        print("caminho não existe pois é infinito(os numeros são negativos) ")
 
 dijkstra(grafo,'a' ,'h')
 
