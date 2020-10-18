@@ -70,7 +70,7 @@ def dijkstra(grafo,inicio,final):
 
 dijkstra(grafo,'a' ,'g')
 
-dijkstra(gr, '1', '4')
+#dijkstra(gr, '1', '4')
 
 
 
