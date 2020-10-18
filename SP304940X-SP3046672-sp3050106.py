@@ -1,3 +1,7 @@
+# Prof dicionario em python tem uma certa dificuldade para fazer a leitura entao deixei 2 grafos e se quiser testar com outros numeros
+# O primeiro grafo eh o da sua aula no slide de dijkstra e o segundo um aleatorio com os numeros de entrada 1 a n 
+
+
 grafo = {
     'a':{'b':1,'c':3,'d':2},
     'b':{'a':1,'d':3,'e':2.5},
