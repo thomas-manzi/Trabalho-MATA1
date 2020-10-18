@@ -50,9 +50,9 @@ def main():
     #            break
 
     for i in range(len(grafo)):
-        for j in range(len(grafo)):
+        print(grafo[i])
+        #for j in range(len(grafo)):
             
-            print(grafo[i])
 
     #criar varias listas , armazenar valor de cada caminho em uma lista , fazer a soma do caminho e jogar o numero para outra lista, zerar a primeira ,  
 
