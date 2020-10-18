@@ -68,7 +68,9 @@ def dijkstra(grafo,inicio,final):
         print("Caminho do Grafo é "+ str(caminho))
     
 
-dijkstra(gr,'1' ,'4')
+dijkstra(grafo,'a' ,'g')
+
+dijkstra(gr, '1', '4')
 
 
 
